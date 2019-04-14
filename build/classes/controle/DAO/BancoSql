@@ -1,0 +1,11 @@
+CREATE TABLE `bancariodb`.`clienteF` ( `idPessoa` INT NOT NULL AUTO_INCREMENT , `nomePessoa` VARCHAR(50) NOT NULL , `nomeSocial` VARCHAR(20) NOT NULL , `cpf` VARCHAR(11) NOT NULL , `cep` VARCHAR(8) NOT NULL , `num` VARCHAR(10) NOT NULL , `complemento` VARCHAR(25) NOT NULL , PRIMARY KEY (`idPessoa`)) ENGINE = InnoDB;
+
+//ClientesJ
+
+CREATE TABLE `bancariodb`.`clientesJ` ( `idPessoa` INT NOT NULL AUTO_INCREMENT , `nomePessoa` VARCHAR(50) NOT NULL , `nomeSocial` VARCHAR(25) NOT NULL , `cnpj` VARCHAR(14) NOT NULL , `cep` VARCHAR(8) NOT NULL , `num` VARCHAR(25) NOT NULL , `complemento` VARCHAR(25) NOT NULL , PRIMARY KEY (`idPessoa`)) ENGINE = InnoDB;
+
+
+contaespecial
+CREATE TABLE `bancariodb`.`contaespecial` ( `numConta` INT NOT NULL , `idCliente` INT NOT NULL AUTO_INCREMENT , `saldo` DOUBLE NOT NULL , `senha` INT(6) NOT NULL , `limite` INT NOT NULL , PRIMARY KEY (`idCliente`)) ENGINE = InnoDB;
+
+CREATE TABLE `bancariodb`.`contacomum` ( `numConta` INT NOT NULL , `idCliente` INT NOT NULL , `saldo` DOUBLE NOT NULL , `senha` INT(6) NOT NULL ) ENGINE = InnoDB;
